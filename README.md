@@ -10,7 +10,7 @@ To use the bootstrap snippets, type the specified keyword. A list of bootstrap s
 
 ## Installation Instructions
 
-* Open atom, cick on **packages** which is present on the top of the editor or simply press `ctrl+comma`.
+* Open atom, click on **packages** which is present on the top of the editor and then **settings view > open**  or simply press `ctrl+comma`.
 * Now click on install and search for the package `bootstrap-snippets-atom` in the search bar and click install.
 * Now restart the atom.
 
