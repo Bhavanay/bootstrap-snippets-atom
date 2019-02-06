@@ -1,0 +1,18 @@
+{
+  "name": "bootstrap-snippets-atom",
+  "version": "0.0.1",
+  "description": "Customized bootstrap snippets for Atom",
+  "keywords": [
+    "javascript",
+    "snippets",
+    "css",
+    "html",
+    "ruby"
+  ],
+  "repository": "https://github.com/Bhavanay/bootstrap-snippets-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}

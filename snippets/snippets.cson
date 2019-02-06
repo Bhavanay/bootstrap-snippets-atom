@@ -1,0 +1,850 @@
+
+# html and erb
+'.text.html.basic , .text.html.erb':
+  'bootstrap media':
+    'prefix': 'media'
+    'body': """
+      <div class="media">
+        <div class="media-left">
+          $1
+        </div>
+        <div class="media-body">
+          $2
+        </div>
+        <div class="media-right">
+          $3
+        </div>
+      </div>
+    """
+
+  'card with image and text':
+    'prefix': 'card'
+    'body':  """
+      <div class="card">
+        <img src="$1" alt="$2">
+        <div class="card-body">
+          <h5 class="card-title">$3</h5>
+          <p class="card-text">$4</p>
+          <div class="text-warning">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+          <a href="#" class="btn btn-primary pull-right">$5</a>
+        </div>
+      </div>
+    """
+
+  'accordion with plus and minus icons':
+    'prefix': 'accordion'
+    'body': """
+      <!-- required bootstrap js and fontawesome -->
+      <!-- add 'accordion' snippet in css -->
+      <div id="accordion" class="accordion">
+        <div class="card mb-0">
+          <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+           <a class="card-title">$1</a>
+          </div>
+           <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+             <p>$2</p>
+           </div>
+           <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+             <a class="card-title">$3</a>
+           </div>
+           <div id="collapseTwo" class="card-body collapse" data-parent="#accordion" >
+             <p>$4</p>
+           </div>
+           <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+             <a class="card-title">$5</a>
+           </div>
+           <div id="collapseThree" class="collapse" data-parent="#accordion" >
+             <div class="card-body">$6</div>
+           </div>
+        </div>
+     </div>
+    """
+
+  'header with top fixed':
+   'prefix': 'header-t-f'
+   'body': """
+      <!-- required bootstrap js -->
+      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="$1" alt="$2", height="34">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">$3</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">$4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">$5</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-primary my-2 my-sm-0 ml-2" type="submit">Login/ Signup</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    """
+
+  'dynamic tab pills':
+    'prefix': 'tabs'
+    'body': """
+      <!-- required bootstrap js -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="home" class="container tab-pane active">
+          <p>$1</p>
+        </div>
+        <div id="menu1" class="container tab-pane fade">
+          <p>$2</p>
+        </div>
+        <div id="menu2" class="container tab-pane fade">
+          <p>$3</p>
+        </div>
+      </div>
+     """
+
+  'table with responsive':
+    'prefix': 'table-r'
+    'body': """
+      <table class="table table-striped table-responsive">
+        <thead>
+          <tr>
+            <th>$1</th>
+            <th>$2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$3</td>
+            <td>$4</td>
+          </tr>
+          <tr>
+            <td>$5</td>
+            <td>$6</td>
+          </tr>
+          <tr>
+            <td>$7</td>
+            <td>$8</td>
+          </tr>
+        </tbody>
+      </table>
+     """
+
+  'carousel with indicators,controls and captions':
+    'prefix': 'carousel-slider'
+    'body': """
+      <!-- required bootstrap js -->
+      <!-- add 'carousel-slider' snippet in css -->
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="$1" alt="">
+            <div class="carousel-caption">
+              <h3>$2Title</h3>
+              <p>$3Caption</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="$4" alt="">
+            <div class="carousel-caption">
+              <h3>$5Title</h3>
+              <p>$6Caption</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="$7" alt="">
+            <div class="carousel-caption">
+              <h3>$8Title</h3>
+              <p>$9Caption</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+     """
+
+  'timeline with responsive':
+    'prefix': 'timeline-r'
+    'body': """
+      <!-- required FontAwesome -->
+      <!-- add 'timeline-r' snippet in css -->
+      <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="fa fa-user"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">title</h4>
+            </div>
+            <div class="timeline-body">
+              <p>caption</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="fa fa-home"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">title</h4>
+            </div>
+            <div class="timeline-body">
+              <p>caption</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="fa fa-user"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">title</h4>
+            </div>
+            <div class="timeline-body">
+              <p>caption</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="fa fa-home"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">title</h4>
+            </div>
+            <div class="timeline-body">
+              <p>caption</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+     """
+
+  'Basic footer':
+    'prefix': 'footer'
+    'body': """
+      <!-- add 'footer' snippet in css -->
+      <div class="footer-v1 bg-img">
+      	<div class="footer no-margin">
+      		<div class="container">
+      			<div class="row">
+      				<div class="col-md-3">
+      					<div class="headline"><p>Exams</p></div>
+      					<ul class="list-unstyled link-list">
+      						<li><a href="#">Exam 1</a></li>
+      						<li><a href="#">Exam 2 </a></li>
+      						<li><a href="#">Exam 3</a></li>
+      					</ul>
+      				</div>
+      				<div class="col-md-3">
+      					<div class="headline"><p>Resources</p></div>
+      					<ul class="list-unstyled link-list">
+      						<li><a href="#">Blog</a></li>
+      					</ul>
+      				</div>
+      				<div class="col-md-3">
+                <div class="headline"><p>Support</p></div>
+                <address>
+                  <ul class="list-unstyled link-list">
+                    <li><a href="#">Contact Us</a></li>
+                    <li>
+                      <a href="#"><i class="fa fa-envelope"></i>support@company.com</a>
+                    </li>
+                  </ul>
+                </address>
+              </div>
+      				<div class="col-md-3">
+      					<div class="headline"><p>Company</p></div>
+      					<ul class="list-unstyled link-list">
+                  <li><a href="#">About Us</a></li>
+                  <li> <a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Cancellation/Rescheduling policy</a></li>
+                </ul>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+     """
+
+  'Flip card on hover':
+    'prefix': 'flip-card'
+    'body': """
+      <!-- add 'flip-card' snippet in css -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="$1" alt="Avatar" style="width:200px;height:200px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>$2</h1>
+            <p>$3</p>
+            <p>$4</p>
+          </div>
+        </div>
+      </div>
+     """
+
+  'sticky sidebar collapse to icons with responsive':
+    'prefix': 'sidebar-icons'
+    'body': """
+      <!-- required fontawesome -->
+      <!-- add 'sidebar-icons' snippet in css -->
+      <!-- add 'sidebar-icons' snippet in js -->
+      <div class="container">
+      	<div class="row">
+      		 <div id="wrapper">
+            <div id="sidebar-wrapper">
+              <ul class="sidebar-nav" style="margin-left:0;">
+                <li class="sidebar-brand">
+                  <a href="#menu-toggle"  id="menu-toggle" style="margin-top:10px;float:right;" >
+                    <i class="fa fa-bars " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-sort-alpha-asc " aria-hidden="true"> </i> <span style="margin-left:10px;">Section</span>  </a>
+                </li>
+                <li>
+                  <a href="#"> <i class="fa fa-play-circle-o " aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
+                </li>
+                <li>
+                  <a href="#"> <i class="fa fa-puzzle-piece" aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
+                </li>
+                <li>
+                  <a href="#"> <i class="fa fa-font" aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-info-circle " aria-hidden="true"> </i> <span style="margin-left:10px;">Section </span> </a>
+                </li>
+                <li>
+                  <a href="#"> <i class="fa fa-comment-o" aria-hidden="true"> </i> <span style="margin-left:10px;"> Section</span> </a>
+                </li>
+              </ul>
+            </div>
+        	</div>
+        </div>
+        <p>Some text</p>
+      </div>
+     """
+
+  'basic login/signup form using modal':
+    'prefix': 'login-signup'
+    'body': """
+      <!-- required bootstrap js -->
+      <button type="submit" name="commit" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#login">
+        Login/Signup
+      </button>
+      <div class="modal fade" id="login" role="dialog">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Login</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+              </div>
+              <button type="submit" name="commit" class="btn btn-primary btn-lg btn-block">
+                <span>Login <i class="fa fa-sign-in"></i></span>
+              </button>
+              <div class="text-center">
+                <a class="" href="" data-dismiss="modal" data-toggle="modal" data-target="#signup">Signup</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="signup" role="dialog">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Signup</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <i class="fa fa-user"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Password confirmation" aria-label="Password confirmation" aria-describedby="basic-addon1">
+              </div>
+              <button type="submit" name="commit" class="btn btn-primary btn-lg btn-block">
+                <span>Signup <i class="fa fa-sign-in"></i></span>
+              </button>
+              <div class="text-center">
+                <a class="" href="" data-dismiss="modal" data-toggle="modal" data-target="#login">Login</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     """
+
+# js
+'.source.js':
+  'Console log':
+    'prefix': 'log'
+    'body': 'console.log($1)'
+
+  'sticky sidebar collapse to icons with responsive':
+    'prefix': 'sidebar-icons'
+    'body': """
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    """
+
+# css
+'.source.css':
+  'accordion with plus and minus icons':
+    'prefix': 'accordion'
+    'body': """
+      .accordion .card-header:after {
+        font-family: 'FontAwesome';
+        content: "\f068";
+        float: right;
+      }
+      .accordion .card-header.collapsed:after {
+        /* symbol for "collapsed" panels */
+        content: "\f067";
+      }
+    """
+
+  'carousel with indicators,controls and captions':
+    'prefix': 'carousel-slider'
+    'body': """
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+    """
+
+  'timeline with responsive':
+    'prefix': 'timeline-r'
+    'body': """
+      .timeline {
+        list-style: none;
+        padding: 20px 0 20px;
+        position: relative;
+      }
+      .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+      }
+      .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .timeline > li:before,
+      .timeline > li:after {
+        content: " ";
+        display: table;
+      }
+      .timeline > li:after {
+        clear: both;
+      }
+      .timeline > li:before,
+      .timeline > li:after {
+        content: " ";
+        display: table;
+      }
+      .timeline > li:after {
+          clear: both;
+      }
+      .timeline > li > .timeline-panel {
+        width: 46%;
+        float: left;
+        border: 1px solid #d4d4d4;
+        border-radius: 2px;
+        padding: 20px;
+        position: relative;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+      }
+      .timeline > li > .timeline-panel:before {
+        position: absolute;
+        top: 26px;
+        right: -15px;
+        display: inline-block;
+        border-top: 15px solid transparent;
+        border-left: 15px solid #ccc;
+        border-right: 0 solid #ccc;
+        border-bottom: 15px solid transparent;
+        content: " ";
+      }
+      .timeline > li > .timeline-panel:after {
+        position: absolute;
+        top: 27px;
+        right: -14px;
+        display: inline-block;
+        border-top: 14px solid transparent;
+        border-left: 14px solid #fff;
+        border-right: 0 solid #fff;
+        border-bottom: 14px solid transparent;
+        content: " ";
+      }
+      .timeline > li > .timeline-badge {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        text-align: center;
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        margin-left: -25px;
+        background-color: #999999;
+        z-index: 100;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+      }
+      .timeline > li.timeline-inverted > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+      }
+      @media (max-width: 767px) {
+        ul.timeline:before {
+          left: 40px;
+        }
+        ul.timeline > li > .timeline-panel {
+          width: calc(100% - 90px);
+          width: -moz-calc(100% - 90px);
+          width: -webkit-calc(100% - 90px);
+        }
+        ul.timeline > li > .timeline-badge {
+          left: 15px;
+          margin-left: 0;
+          top: 16px;
+        }
+        ul.timeline > li > .timeline-panel {
+          float: right;
+        }
+        ul.timeline > li > .timeline-panel:before {
+          border-left-width: 0;
+          border-right-width: 15px;
+          left: -15px;
+          right: auto;
+        }
+        ul.timeline > li > .timeline-panel:after {
+          border-left-width: 0;
+          border-right-width: 14px;
+          left: -14px;
+          right: auto;
+        }
+      }
+    """
+
+  'Basic footer':
+    'prefix': 'footer'
+    'body': """
+      .footer-v1.bg-img {
+        background-color: black;
+        background-repeat: repeat;
+      }
+      .headline {
+      	display: block;
+      	margin: 10px 0 25px 0;
+      	border-bottom: 1px dotted #e4e9f0;
+        color: white;
+        font-size: 20px;
+      }
+      .headline p {
+      	margin: 0 0 -2px 0;
+      	padding-bottom: 5px;
+      	display: inline-block;
+      	border-bottom: 2px solid #7e57c2;
+      }
+      .link-list > li{
+        padding: 7px 0px;
+      }
+      .link-list > li > a , .link-list > li> i{
+        color:#eee;
+        font-size: 16px;
+      }
+    """
+
+  'Flip card on hover':
+    'prefix': 'flip-card'
+    'body': """
+      .flip-card {
+        background-color: transparent;
+        width: 200px;
+        height: 200px;
+        perspective: 1000px;
+      }
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+        z-index: 2;
+      }
+      .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+        z-index: 1;
+      }
+    """
+
+  'sticky sidebar collapse to icons with responsive':
+    'prefix': 'sidebar-icons'
+    'body': """
+      #wrapper {
+        padding-left: 0;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+      }
+      #wrapper.toggled {
+        padding-left: 200px;
+      }
+      #sidebar-wrapper {
+        z-index: 1000;
+        position: fixed;
+        left: 250px;
+        width: 0;
+        height: 100%;
+        margin-left: -250px;
+        overflow-y: auto;
+        background-color:#312A25 !Important;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      #wrapper.toggled #sidebar-wrapper {
+         width: 0;
+      }
+      #page-content-wrapper {
+         width: 100%;
+         position: absolute;
+         padding: 10px;
+      }
+      #wrapper.toggled #page-content-wrapper {
+         position: absolute;
+         margin-left:-250px;
+      }
+      .sidebar-nav {
+         position: absolute;
+         top: 0;
+         right:15px;
+         width: 200px;
+         margin: 0;
+         padding: 0;
+         list-style: none;
+      }
+      .sidebar-nav li {
+         text-indent: 20px;
+         line-height: 40px;
+      }
+      .sidebar-nav li a {
+         display: block;
+         text-decoration: none;
+         color: #999999;
+      }
+      .sidebar-nav li a:hover {
+         text-decoration: none;
+         color: #fff;
+         background: #312A25;
+      }
+      .sidebar-nav li a:active,
+      .sidebar-nav li a:focus {
+         text-decoration: none;
+      }
+      .sidebar-nav > .sidebar-brand {
+         height: 60px;
+         font-size: 18px;
+      }
+      .sidebar-nav > .sidebar-brand a {
+         color: #999999;
+      }
+      .sidebar-nav > .sidebar-brand a:hover {
+         color: #fff;
+         background: none;
+      }
+      @media(min-width:768px) {
+        #wrapper {
+          padding-left: 220px;
+        }
+        #wrapper.toggled {
+          padding-left: 0;
+        }
+        #sidebar-wrapper {
+          width: 200px;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+          width: 40px;
+        }
+        #wrapper.toggled span {
+          visibility:hidden;
+        }
+        #wrapper.toggled   i {
+          float:right;
+        }
+        #page-content-wrapper {
+          padding: 20px;
+          position: relative;
+        }
+         #wrapper.toggled #page-content-wrapper {
+           position: relative;
+           margin-right: 0;
+         }
+      }
+      @media(max-width:414px) {
+        #wrapper.toggled #page-content-wrapper {
+          position: absolute;
+          margin-right:60px;
+        }
+        #wrapper.toggled {
+          padding-right: 60px;
+        }
+        #wrapper {
+          padding-left: 20px;
+        }
+        #wrapper.toggled {
+          padding-left: 0;
+        }
+        #sidebar-wrapper {
+          width: 50px;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+           width: 140px;
+        }
+        #wrapper.toggled span {
+           visibility:visible;
+           position:relative;
+           left:70px;
+           bottom:13px;
+        }
+        #wrapper span {
+           visibility:hidden;
+         }
+        #wrapper.toggled   i {
+          float:right;
+        }
+        #wrapper i {
+          float:right;
+        }
+        #page-content-wrapper {
+          padding: 5px;
+          position: relative;
+        }
+        #wrapper.toggled #page-content-wrapper {
+          position: relative;
+          margin-right: 0;
+        }
+      }
+     """
