@@ -129,5 +129,8 @@ To use the bootstrap snippets, type the specified keyword. A list of bootstrap s
 2. All the available snippets required bootstrap 4 css.
 3. Required font-awesome version is 4.7.0.
 
+If you can contribute or you want to, feel free to do it at [Buy me a coffee!](https://www.buymeacoffee.com/bhavanay), I will be really thankfull for anything even if it is a coffee or just a kind comment towards my work, because that helps me a lot. Thank you!
+
+[![](https://raw.githubusercontent.com/Bhavanay/bootstrap-snippets-atom/master/snippets-images/buymeacoffee.png)](https://www.buymeacoffee.com/bhavanay)
 
 **Enjoy!**
